@@ -5,11 +5,11 @@ export async function query() {
 }
 
 export async function queryCurrent() {
-    return get('/api/ganbare/user/currentUser');
+    return get('/api/admin/user/currentUser');
 }
 
 export async function accountLogin(name, password) {
-    return post('/api/ganbare/user/login', {
+    return post('/api/admin/user/login', {
         name,
         password,
     });

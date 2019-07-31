@@ -76,15 +76,10 @@ export default {
         bizcharts: 'BizCharts',
     },
     proxy: {
-        '/api/ganbare/': {
+        '/api/admin/': {
             target: 'http://127.0.0.1:7001/',
             changeOrigin: true,
-            pathRewrite: { '^/api/ganbare/': '/api/admin/' },
-        },
-        '/api/upload/': {
-            target: 'https://sm.ms/api/upload/',
-            changeOrigin: true,
-            pathRewrite: { '^/api/upload/': '' },
+            // pathRewrite: { '^/server': '' },
         },
     },
     ignoreMomentLocale: true,
@@ -115,12 +110,11 @@ export default {
         },
     },
     manifest: {
-        basePath: '/ganbareadmin/',
+        basePath: '/admin/',
     },
 
-    // history: 'hash',
-    base: NODE_ENV !== 'production' ? '/' : '/ganbareadmin/',
-    publicPath: NODE_ENV !== 'production' ? '/' : '/ganbareadmin/',
+    base: NODE_ENV !== 'production' ? '/' : '/admin/',
+    publicPath: NODE_ENV !== 'production' ? '/' : '/admin/',
     runtimePublicPath: true,
 
     chainWebpack: webpackPlugin,

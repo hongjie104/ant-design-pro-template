@@ -9,7 +9,7 @@ module.exports = {
     menu: {
         disableLocal: false,
     },
-    title: '顽张る',
+    title: 'Ant Design Pro',
     pwa: true,
     // your iconfont Symbol Scrip Url
     // eg：//at.alicdn.com/t/font_1039637_btcrd5co4w.js

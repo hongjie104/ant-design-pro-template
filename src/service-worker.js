@@ -18,7 +18,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
  * Register a navigation route.
  * https://developers.google.com/web/tools/workbox/modules/workbox-routing#how_to_register_a_navigation_route
  */
-workbox.routing.registerNavigationRoute('/ganbareadmin/index.html');
+workbox.routing.registerNavigationRoute('/admin/index.html');
 
 /**
  * Use runtime cache:
@@ -31,7 +31,7 @@ workbox.routing.registerNavigationRoute('/ganbareadmin/index.html');
 /**
  * Handle API requests
  */
-workbox.routing.registerRoute(/\/api\/admin\//, workbox.strategies.networkOnly());
+workbox.routing.registerRoute(/\/api\//, workbox.strategies.networkFirst());
 
 /**
  * Handle third party requests
